@@ -7,6 +7,7 @@ function Footer() {
       <a
         href="https://github.com/caarlos1"
         target="_blank"
+        rel="noreferrer"
         className="hover:text-purple-800"
       >
         Carlos Roberto

@@ -24,7 +24,7 @@ function ScoreLine({
   useEffect(() => {
     setInputStart(line.start);
     setInputEnd(line.end);
-  }, []);
+  }, [line.start, line.end]);
 
   return (
     <div className="container my-2">

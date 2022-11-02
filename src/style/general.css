@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.page {
+  @apply w-screen h-screen flex justify-center items-center flex-col bg-slate-50 p-2;
+}
+
+.btn {
+  @apply font-bold py-2 px-4 rounded;
+}
+
+.btn--blue {
+  @apply text-white bg-blue-500 hover:bg-blue-600 active:bg-blue-700;
+}
+
+.title {
+  @apply text-2xl font-bold;
+}
+
+.card {
+  @apply flex p-4 sm:p-6  bg-white rounded-lg shadow-xl border border-gray-50;
+}
+
+.text-field {
+  @apply border p-2 border-gray-100 rounded-md shadow-sm w-full focus:outline-none focus:border-gray-300;
+}
+
+.icon-button {
+  @apply flex justify-center items-center rounded-md;
+}
+
+.add-button {
+  @apply bg-slate-50 text-blue-500 hover:bg-blue-500 active:bg-blue-600 hover:text-white icon-button;
+}
+
+.remove-button {
+  @apply bg-slate-50 text-red-500 hover:bg-red-500 active:bg-red-600 hover:text-white icon-button;
+}

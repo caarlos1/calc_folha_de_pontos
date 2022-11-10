@@ -1,6 +1,6 @@
 import React from 'react';
 import Page from './components/Page';
-import ScoreCard from './components/ScoreCard';
+import ScorePage from './pages/ScorePage';
 import Footer from './components/Footer';
 
 import './style/general.css';
@@ -8,7 +8,7 @@ import './style/general.css';
 function App() {
   return (
     <Page>
-      <ScoreCard />
+      <ScorePage />
       <Footer />
     </Page>
   );

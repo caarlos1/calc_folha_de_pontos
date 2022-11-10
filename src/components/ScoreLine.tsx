@@ -3,7 +3,7 @@ import { PlusCircleIcon, TrashIcon } from '@heroicons/react/24/outline';
 
 import { ScoreLineItem } from '../util/types';
 
-function ScoreLine({
+const ScoreLine = ({
   addScoreLine,
   deleteScoreLine,
   line,
@@ -17,7 +17,7 @@ function ScoreLine({
   lineIndex: number;
   firstLine?: boolean;
   updateValues: (type: string, id: string, value: string) => void;
-}) {
+}) => {
   const [inputStart, setInputStart] = useState('');
   const [inputEnd, setInputEnd] = useState('');
 
@@ -33,7 +33,7 @@ function ScoreLine({
           <input
             type="time"
             className="text-field col-span-1"
-            title="Hora inicial"
+            title={`Ponto Inicial: ${lineIndex + 1}`}
             value={inputStart}
             onChange={(event) => {
               setInputStart(event.target.value);
@@ -43,7 +43,7 @@ function ScoreLine({
           <input
             type="time"
             className="text-field col-span-1"
-            title="Hora final"
+            title={`Ponto Final: ${lineIndex + 1}`}
             value={inputEnd}
             onChange={(event) => {
               setInputEnd(event.target.value);
@@ -56,7 +56,7 @@ function ScoreLine({
           <button
             onClick={() => addScoreLine()}
             className="add-button w-full"
-            title="Aidicionar linha"
+            title={`Adicionar Linha ${lineIndex + 2}`}
           >
             <PlusCircleIcon className="h-6 w-6" />
           </button>
@@ -65,7 +65,7 @@ function ScoreLine({
             <button
               onClick={() => deleteScoreLine()}
               className="remove-button w-full"
-              title="Remover linha"
+              title={`Remover Linha ${lineIndex + 1}`}
             >
               <TrashIcon className="h-6 w-6" />
             </button>
@@ -74,6 +74,6 @@ function ScoreLine({
       </div>
     </div>
   );
-}
+};
 
 export default ScoreLine;

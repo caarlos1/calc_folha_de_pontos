@@ -18,7 +18,7 @@ const ScoreTable = ({
             <th className="th-table">Total</th>
           </tr>
         </thead>
-        <tbody className="bg-white dark:bg-slate-800">
+        <tbody className="bg-white">
           {scoreLines
             .filter((l) => calcMinutes(l))
             .map((line, index) => (

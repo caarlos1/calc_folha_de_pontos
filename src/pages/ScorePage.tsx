@@ -6,6 +6,7 @@ import {
   formatMinutesToHourString,
   scoreLineBuilder,
 } from '../util/functions';
+import * as storage from '../util/storage';
 import { ScoreLineItem } from '../util/types';
 import ScoreTable from '../components/ScoreTable';
 import ScoreCard from '../components/ScoreCard';
@@ -17,15 +18,20 @@ const ScorePage = () => {
   const addScoreLine = (postion: number) => {
     const list = [...scoreLines];
     list.splice(postion, 0, scoreLineBuilder());
-    setScoreLines(list);
+    setScoreLines(() => {
+      storage.set('list', list);
+      return list;
+    });
   };
 
   const deleteScoreLine = (id: string) => {
     setScoreLines(scoreLines.filter((i) => i.id !== id));
   };
 
-  const updateTotalHours = (scoreLines: ScoreLineItem[]) =>
+  const updateTotalHours = (scoreLines: ScoreLineItem[]) => {
+    storage.set('list', scoreLines);
     setTotalHours(formatMinutesToHourString(calcTotalMinutes(scoreLines)));
+  };
 
   const updateValues = (type: string, id: string, value: string) => {
     setScoreLines(() => {
@@ -43,7 +49,14 @@ const ScorePage = () => {
     updateTotalHours(scoreLines);
   }, [scoreLines]);
 
-  if (scoreLines.length <= 0) addScoreLine(0);
+  if (scoreLines.length <= 0) {
+    const list = storage.get<ScoreLineItem[]>('list');
+    if (list) {
+      setScoreLines(list);
+    } else {
+      addScoreLine(0);
+    }
+  }
 
   return (
     <>

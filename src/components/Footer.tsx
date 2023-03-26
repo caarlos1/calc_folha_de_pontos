@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <span className="mt-5">
+    <span className="mt-5 dark:text-white">
       Desenvolvido por{' '}
       <a
         href="https://github.com/caarlos1"

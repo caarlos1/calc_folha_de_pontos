@@ -1,4 +1,4 @@
-type storageKey = 'list';
+type storageKey = 'list' | 'darkTheme';
 
 export const get = <T>(key: storageKey): T | null => {
   const value = window.localStorage && window.localStorage.getItem(key);

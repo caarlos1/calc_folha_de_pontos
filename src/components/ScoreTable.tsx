@@ -9,7 +9,7 @@ const ScoreTable = ({
   totalHours: string;
 }) => {
   return (
-    <div className="max-w-sm w-full border border-slate-200 pt-4 rounded-md mt-4 shadow-lg">
+    <div className="max-w-sm w-full border border-slate-200 dark:border-slate-900 pt-4 rounded-md mt-4 shadow-lg">
       <table className="table-auto w-full" title="Tabela de Horas Totais">
         <thead>
           <tr>
@@ -18,7 +18,7 @@ const ScoreTable = ({
             <th className="th-table">Total</th>
           </tr>
         </thead>
-        <tbody className="bg-white">
+        <tbody className="bg-white dark:bg-gray-900">
           {scoreLines
             .filter((l) => calcMinutes(l))
             .map((line, index) => (

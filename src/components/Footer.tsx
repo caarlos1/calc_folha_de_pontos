@@ -6,17 +6,17 @@ function Footer() {
       Desenvolvido por{' '}
       <a
         href="https://github.com/caarlos1"
+        className="footer-link"
         target="_blank"
         rel="noreferrer"
-        className="hover:text-purple-800"
       >
         Carlos Roberto.
       </a>
       <a
         href="https://ko-fi.com/caarlos"
+        className="footer-link"
         target="_blank"
         rel="noreferrer"
-        className="hover:text-purple-800"
       >
         {' '}
         Me pague um café!

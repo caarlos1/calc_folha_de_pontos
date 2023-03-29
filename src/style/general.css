@@ -53,3 +53,7 @@
 .th-f-result-table {
   @apply text-slate-600 text-left p-3 pl-8 font-bold;
 }
+
+.footer-link {
+  @apply hover:text-purple-800;
+}

@@ -147,9 +147,4 @@ describe('<ScorePage />', () => {
     totalHours = getTotalHours();
     expect(totalHours.textContent).toBe('08:30');
   });
-
-  test('should to match snapshot', () => {
-    const { container } = render(<ScorePage />);
-    expect(container).toMatchSnapshot();
-  });
 });

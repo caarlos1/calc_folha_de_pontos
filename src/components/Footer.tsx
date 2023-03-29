@@ -2,17 +2,28 @@ import React from 'react';
 
 function Footer() {
   return (
-    <span className="mt-5">
-      Desenvolvido por{' '}
+    <footer>
+      <span className="mt-5">
+        Desenvolvido por{' '}
+        <a
+          href="https://github.com/caarlos1"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:text-purple-800"
+        >
+          Carlos Roberto.
+        </a>
+      </span>
       <a
-        href="https://github.com/caarlos1"
+        href="https://ko-fi.com/caarlos"
         target="_blank"
         rel="noreferrer"
         className="hover:text-purple-800"
       >
-        Carlos Roberto
+        {' '}
+        Me pague um café!
       </a>
-    </span>
+    </footer>
   );
 }
 export default Footer;

@@ -18,7 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --coverage",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "husky:install": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -48,7 +49,10 @@
     "@types/react-dom": "^18.0.8",
     "@types/uuid": "^8.3.4",
     "autoprefixer": "^10.4.13",
+    "husky": "^8.0.3",
     "postcss": "^8.4.18",
+    "prettier": "^2.8.7",
+    "pretty-quick": "^3.1.3",
     "tailwindcss": "^3.2.1"
   }
 }

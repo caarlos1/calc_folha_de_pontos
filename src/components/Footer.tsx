@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="mt-5">
+    <footer className="mt-5 text-center">
       Desenvolvido por{' '}
       <a
         href="https://github.com/caarlos1"
@@ -12,14 +12,14 @@ function Footer() {
       >
         Carlos Roberto.
       </a>
+      <br />
       <a
         href="https://ko-fi.com/caarlos"
         className="footer-link"
         target="_blank"
         rel="noreferrer"
       >
-        {' '}
-        Me pague um café!
+        ☕ Me pague um café!
       </a>
     </footer>
   );

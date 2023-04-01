@@ -3,6 +3,9 @@ import {
   formatMinutesToHourString,
 } from '../util/functions';
 import { ScoreLineItem } from '../util/types';
+import { handleMinutes } from '../util/functions';
+
+const { totalMinutes } = handleMinutes();
 
 const ScoreTable = ({
   scoreLines,
@@ -39,8 +42,8 @@ const ScoreTable = ({
                 </td>
               </tr>
             ))}
-          {extraHour && (
-            <tr className='bg-green-100'>
+          {!!totalMinutes(extraHour) && (
+            <tr className="bg-green-100">
               <td className="td-table" title={`Hora Extra`}>
                 Hora Extra:
               </td>

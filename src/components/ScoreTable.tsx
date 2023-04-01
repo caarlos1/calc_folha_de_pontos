@@ -17,7 +17,7 @@ const ScoreTable = ({
   extraHour: string;
 }) => {
   return (
-    <div className="max-w-Lg w-full border border-slate-200 dark:border-slate-900 pt-4 rounded-md mt-4 shadow-lg">
+    <div className="max-w-lg w-full border border-slate-200 dark:border-slate-900 pt-4 rounded-md mt-4 shadow-lg">
       <table className="table-auto w-full" title="Tabela de Horas Totais">
         <thead>
           <tr>

@@ -32,7 +32,7 @@ const ScoreCard = ({
 
       <div className="mt-5">
         <div className="grid grid-cols-12 gap-2">
-          <div className="grid col-span-8 grid-cols-2 gap-2">
+          <div className="grid col-span-8 grid-cols-2 gap-2 dark:text-white">
             <p>Ponto Inicial</p>
             <p>Ponto Final</p>
           </div>

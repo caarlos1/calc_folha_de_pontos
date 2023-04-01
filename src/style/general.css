@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .page {
-  @apply w-screen h-screen flex justify-center items-center flex-col bg-slate-50 p-4;
+  @apply w-screen h-screen flex justify-center items-center flex-col bg-slate-50 dark:bg-slate-800 p-4;
 }
 
 .btn {
@@ -15,15 +15,15 @@
 }
 
 .title {
-  @apply text-2xl font-bold;
+  @apply text-2xl font-bold dark:text-white;
 }
 
 .card {
-  @apply flex p-4 sm:p-6  bg-white rounded-lg shadow-lg border border-gray-50;
+  @apply flex p-4 sm:p-6  bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-50 dark:border-gray-800;
 }
 
 .text-field {
-  @apply border p-2 border-gray-100 rounded-md shadow-sm w-full focus:outline-none focus:border-gray-300;
+  @apply border p-2 border-gray-100 dark:border-gray-900 dark:bg-gray-700 dark:placeholder:text-gray-200 dark:text-gray-200 rounded-md shadow-sm w-full focus:outline-none focus:border-gray-300 dark:focus:border-slate-900;
 }
 
 .icon-button {
@@ -31,19 +31,19 @@
 }
 
 .add-button {
-  @apply bg-slate-50 text-blue-500 hover:bg-blue-500 active:bg-blue-600 hover:text-white icon-button;
+  @apply bg-slate-50 dark:bg-slate-800 text-blue-500 hover:bg-blue-500 active:bg-blue-600 dark:hover:bg-blue-600 hover:text-white icon-button;
 }
 
 .remove-button {
-  @apply bg-slate-50 text-red-500 hover:bg-red-500 active:bg-red-600 hover:text-white icon-button;
+  @apply bg-slate-50 dark:bg-slate-800 text-red-500 hover:bg-red-500 active:bg-red-600 dark:hover:bg-red-600 hover:text-white icon-button;
 }
 
 .td-table {
-  @apply border-b border-slate-100 p-2 pl-8 text-slate-500;
+  @apply border-b border-slate-100 dark:border-slate-700 p-2 pl-8 text-slate-500 dark:text-slate-300;
 }
 
 .th-table {
-  @apply border-b font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 text-left;
+  @apply border-b dark:border-slate-700 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 text-left;
 }
 
 .th-f-table {
@@ -51,7 +51,13 @@
 }
 
 .th-f-result-table {
-  @apply text-slate-600 text-left p-3 pl-8 font-bold;
+  @apply text-slate-600 dark:text-slate-50 text-left p-3 pl-8 font-bold;
+}
+
+@layer base {
+  .dark input[type='time']::-webkit-calendar-picker-indicator {
+    filter: invert(100);
+  }
 }
 
 .footer-link {

@@ -37,6 +37,7 @@ const ScoreCard = ({
             <p>Ponto Final</p>
           </div>
         </div>
+
         {scoreLines.map((line, index) => (
           <ScoreLine
             key={line.id}
@@ -48,17 +49,22 @@ const ScoreCard = ({
             firstLine={index === 0}
           />
         ))}
-        <label htmlFor="extra-minutes">Hora Extra:</label>
-        <input
-          type="time"
-          id="extra-minutes"
-          className="text-field col-span-1"
-          value={inputExtraHour}
-          onChange={(event) => {
-            setInputExtraHour(event.target.value);
-            updateExtraHour(event.target.value);
-          }}
-        />
+
+        <div className="mt-5">
+          <label htmlFor="extra-minutes" className="dark:text-white">
+            Hora Extra:
+          </label>
+          <input
+            type="time"
+            id="extra-minutes"
+            className="text-field col-span-1 mt-2"
+            value={inputExtraHour}
+            onChange={(event) => {
+              setInputExtraHour(event.target.value);
+              updateExtraHour(event.target.value);
+            }}
+          />
+        </div>
       </div>
     </div>
   );

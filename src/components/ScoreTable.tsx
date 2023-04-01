@@ -1,15 +1,20 @@
-import { calcMinutes, formatMinutesToHourString } from '../util/functions';
+import {
+  calcIntervalMinutes,
+  formatMinutesToHourString,
+} from '../util/functions';
 import { ScoreLineItem } from '../util/types';
 
 const ScoreTable = ({
   scoreLines,
   totalHours,
+  extraHour,
 }: {
   scoreLines: ScoreLineItem[];
   totalHours: string;
+  extraHour: string;
 }) => {
   return (
-    <div className="max-w-sm w-full border border-slate-200 pt-4 rounded-md mt-4 mb-3 shadow-lg">
+    <div className="max-w-lg w-full border border-slate-200 pt-4 rounded-md mt-4 mb-3 shadow-lg">
       <table className="table-auto w-full" title="Tabela de Horas Totais">
         <thead>
           <tr>
@@ -20,7 +25,7 @@ const ScoreTable = ({
         </thead>
         <tbody className="bg-white">
           {scoreLines
-            .filter((l) => calcMinutes(l))
+            .filter((l) => calcIntervalMinutes(l))
             .map((line, index) => (
               <tr key={index}>
                 <td className="td-table" title={`Início do Ponto ${index + 1}`}>
@@ -30,10 +35,21 @@ const ScoreTable = ({
                   {line.end}
                 </td>
                 <td className="td-table" title={`Total de Horas ${index + 1}`}>
-                  {formatMinutesToHourString(calcMinutes(line))}
+                  {formatMinutesToHourString(calcIntervalMinutes(line))}
                 </td>
               </tr>
             ))}
+          {extraHour && (
+            <tr className='bg-green-100'>
+              <td className="td-table" title={`Hora Extra`}>
+                Hora Extra:
+              </td>
+              <td></td>
+              <td className="td-table" title={`Hora Extra`}>
+                {extraHour}
+              </td>
+            </tr>
+          )}
         </tbody>
         <tfoot>
           <tr>

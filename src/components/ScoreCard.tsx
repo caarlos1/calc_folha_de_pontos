@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { ScoreLineItem } from '../util/types';
 import ScoreLine from './ScoreLine';
 
@@ -6,12 +7,22 @@ const ScoreCard = ({
   addScoreLine,
   deleteScoreLine,
   updateValues,
+  updateExtraHour,
+  extraHour,
 }: {
   scoreLines: ScoreLineItem[];
   addScoreLine: (postion: number) => void;
   deleteScoreLine: (id: string) => void;
   updateValues: (type: string, id: string, value: string) => void;
+  updateExtraHour: (hour: string) => void;
+  extraHour: string;
 }) => {
+  const [inputExtraHour, setInputExtraHour] = useState('');
+
+  useEffect(() => {
+    setInputExtraHour(extraHour);
+  }, [extraHour]);
+
   return (
     <div
       className="card flex-col max-w-lg w-full m-3"
@@ -37,6 +48,17 @@ const ScoreCard = ({
             firstLine={index === 0}
           />
         ))}
+        <label htmlFor="extra-minutes">Hora Extra:</label>
+        <input
+          type="time"
+          id="extra-minutes"
+          className="text-field col-span-1"
+          value={inputExtraHour}
+          onChange={(event) => {
+            setInputExtraHour(event.target.value);
+            updateExtraHour(event.target.value);
+          }}
+        />
       </div>
     </div>
   );

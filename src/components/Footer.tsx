@@ -10,7 +10,16 @@ function Footer() {
         target="_blank"
         rel="noreferrer"
       >
-        Carlos Roberto.
+        Carlos Roberto
+      </a>
+      {' e '}
+      <a
+        href="https://github.com/caarlos1/calculadora-folha-de-pontos#contribuidores"
+        className="footer-link"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Contribuidores.
       </a>
       <br />
       <a

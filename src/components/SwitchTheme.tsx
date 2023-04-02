@@ -2,32 +2,36 @@ import { useEffect, useState } from 'react';
 import { MoonIcon, SunIcon } from '@heroicons/react/24/solid';
 import * as storage from '../util/storage';
 
+interface ThemeStore {
+  dark: boolean;
+}
+
 function SwitchTheme() {
-  const [darkTheme, setTheme] = useState(storage.get('darkTheme') || false);
+  const themeStorage = storage.get<ThemeStore>('themeOptions');
+  const browserPreferDarkTherme = window.matchMedia(
+    '(prefers-color-scheme: dark)',
+  ).matches;
+
+  const [darkTheme, setTheme] = useState<boolean>(themeStorage?.dark || false);
 
   const changeTheme = () => {
-    storage.set('darkTheme', !darkTheme);
+    storage.set('themeOptions', { dark: !darkTheme });
     setTheme(!darkTheme);
   };
 
   useEffect(() => {
-    if (
-      darkTheme ||
-      (!('darkTheme' in storage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    const classList = document.documentElement.classList;
+    if (darkTheme) classList.add('dark');
+    else classList.remove('dark');
   }, [darkTheme]);
 
+  if (!themeStorage && browserPreferDarkTherme) {
+    document.documentElement.classList.add('dark');
+  }
+
   return (
-    <button
-      className="w-12 h-6 mb-2 rounded-full dark:bg-white bg-gray-700 flex items-center transition duration-500 focus:outline-none shadow hover:after:translate-x-1"
-      onClick={() => changeTheme()}
-    >
-      <div className="w-8 h-8 relative rounded-full bg-gray-900 text-white -translate-x-2 dark:bg-gray-200 dark:text-black dark:translate-x-3/4 transition duration-500 transform p-1">
+    <button className="switch-button" onClick={() => changeTheme()}>
+      <div className="switch-button__icon">
         {darkTheme ? (
           <SunIcon className="h-6 w-6" />
         ) : (

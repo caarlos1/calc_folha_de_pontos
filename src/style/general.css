@@ -63,3 +63,11 @@
 .footer-link {
   @apply hover:text-purple-800;
 }
+
+.switch-button {
+  @apply w-12 h-6 mb-2 rounded-full dark:bg-white bg-gray-700 flex items-center transition duration-500 focus:outline-none shadow hover:after:translate-x-1;
+}
+
+.switch-button__icon {
+  @apply w-8 h-8 relative rounded-full bg-gray-900 text-white -translate-x-2 dark:bg-gray-200 dark:text-black dark:translate-x-3/4 transition duration-500 transform p-1;
+}

@@ -1,4 +1,4 @@
-type storageKey = 'list' | 'extraHour' | 'darkTheme';
+type storageKey = 'list' | 'extraHour' | 'themeOptions';
 
 export const get = <T>(key: storageKey): T | null => {
   const value = window.localStorage && window.localStorage.getItem(key);

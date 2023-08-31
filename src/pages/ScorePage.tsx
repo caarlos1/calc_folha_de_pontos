@@ -88,7 +88,8 @@ const ScorePage = () => {
         updateExtraHour={updateExtraHour}
       />
 
-      {scoreLines.filter((l) => calcIntervalMinutes(l)).length > 0 && (
+      {(scoreLines.filter((l) => calcIntervalMinutes(l)).length > 0 ||
+        extraHour) && (
         <ScoreTable
           scoreLines={scoreLines}
           totalHours={totalHours}

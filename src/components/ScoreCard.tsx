@@ -28,7 +28,10 @@ const ScoreCard = ({
       className="card flex-col max-w-lg w-full m-3"
       title="Calculadora de Folha de Pontos"
     >
-      <h2 className="title">Calculadora de Folha de Pontos</h2>
+      <h2 className="title">Folha de Pontos</h2>
+      <p className="description">
+        Uma "calculadora" para facilitar o calculo do seu ponto!
+      </p>
 
       <div className="mt-5">
         <div className="grid grid-cols-12 gap-2">

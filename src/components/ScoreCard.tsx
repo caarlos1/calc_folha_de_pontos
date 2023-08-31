@@ -36,8 +36,8 @@ const ScoreCard = ({
       <div className="mt-5">
         <div className="grid grid-cols-12 gap-2">
           <div className="grid col-span-8 grid-cols-2 gap-2 dark:text-white">
-            <p>Ponto Inicial</p>
-            <p>Ponto Final</p>
+            <p>Inicial:</p>
+            <p>Final:</p>
           </div>
         </div>
 
@@ -55,7 +55,7 @@ const ScoreCard = ({
 
         <div className="mt-5">
           <label htmlFor="extra-minutes" className="dark:text-white">
-            Hora Extra:
+            Banco de Horas:
           </label>
           <input
             type="time"

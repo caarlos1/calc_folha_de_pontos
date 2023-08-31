@@ -18,6 +18,10 @@
   @apply text-2xl font-bold dark:text-white;
 }
 
+.description {
+  @apply text-sm italic dark:text-white;
+}
+
 .card {
   @apply flex p-4 sm:p-6  bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-50 dark:border-gray-800;
 }

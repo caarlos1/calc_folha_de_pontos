@@ -8,5 +8,5 @@ Atualmente o projeto está aberto a contribuições.
 
 - [Matheus Alves Pereira](https://github.com/matheus-alpe)
   - Persistência local das batidas.
-- [Avatar Emilly Almeida](https://github.com/Emillyalmeida)
+- [Emilly Almeida](https://github.com/Emillyalmeida)
   - Botão de troca de tema e tema escuro.

@@ -40,6 +40,7 @@ const ScoreLine = ({
               updateValues('start', line.id, event.target.value);
             }}
           />
+          
           <input
             type="time"
             className="text-field col-span-1"

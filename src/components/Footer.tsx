@@ -5,22 +5,14 @@ function Footer() {
     <footer className="mt-5 text-center dark:text-white">
       Desenvolvido por{' '}
       <a
-        href="https://github.com/caarlos1"
+        href="https://github.com/ohcarlihos"
         className="footer-link"
         target="_blank"
         rel="noreferrer"
       >
-        Carlos Roberto
+        Carlos Júnior
       </a>
-      {' e '}
-      <a
-        href="https://github.com/caarlos1/calculadora-folha-de-pontos#contribuidores"
-        className="footer-link"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Contribuidores.
-      </a>
+      {' e Contribuidores'}
       <br />
       <a
         href="https://ko-fi.com/caarlos"

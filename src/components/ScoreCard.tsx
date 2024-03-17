@@ -26,11 +26,11 @@ const ScoreCard = ({
   return (
     <div
       className="card flex-col max-w-lg w-full m-3"
-      title="Calculadora de Folha de Pontos"
+      title="Planejador de Batidas de Pontos"
     >
-      <h2 className="title">Folha de Pontos</h2>
+      <h2 className="title">Planejador de Batidas de Pontos</h2>
       <p className="description">
-        Uma "calculadora" para facilitar o calculo do seu ponto!
+        Uma "calculadora" para planejar suas batidas de ponto diárias!
       </p>
 
       <div className="mt-5">
@@ -57,6 +57,7 @@ const ScoreCard = ({
           <label htmlFor="extra-minutes" className="dark:text-white">
             Banco de Horas:
           </label>
+          
           <input
             type="time"
             id="extra-minutes"

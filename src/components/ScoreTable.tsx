@@ -43,7 +43,7 @@ const ScoreTable = ({
               </tr>
             ))}
           {!!totalMinutes(extraHour) && (
-            <tr className="bg-green-100">
+            <tr className="bg-green-100 dark:bg-opacity-80">
               <td className="td-table dark:text-slate-700" title={`Banco de Horas`}>
                 Banco:
               </td>

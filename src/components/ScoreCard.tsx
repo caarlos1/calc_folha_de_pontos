@@ -30,7 +30,9 @@ const ScoreCard = ({
     >
       <h2 className="title">Planejador de Batidas de Pontos</h2>
       <p className="description">
-        Uma "calculadora" para planejar suas batidas de ponto diárias!
+        Planejador de batidas de ponto para <b>pessoas preguiçosas</b> que esperam até
+        o último dia do mês para descobrir que horas <b>precisam sair</b> (sem causar
+          problemas sérios com o RH).
       </p>
 
       <div className="mt-5">
@@ -57,7 +59,7 @@ const ScoreCard = ({
           <label htmlFor="extra-minutes" className="dark:text-white">
             Banco de Horas:
           </label>
-          
+
           <input
             type="time"
             id="extra-minutes"

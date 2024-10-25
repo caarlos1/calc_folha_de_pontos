@@ -19,7 +19,7 @@
 }
 
 .description {
-  @apply text-sm italic dark:text-white;
+  @apply text-sm italic dark:text-white pt-3;
 }
 
 .card {

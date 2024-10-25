@@ -20,7 +20,9 @@ export const addZero = (value: number, n: number) => {
 };
 
 export const formatMinutesToHourString = (minutes: number) => {
-  return `${addZero(Math.floor(minutes / 60), 2)}:${addZero(minutes % 60, 2)}`;
+  return `${Math.floor(minutes / 60)}h ${
+    minutes % 60 ? (minutes % 60) + 'm' : ''
+  }`;
 };
 
 export const handleMinutes = () => {
